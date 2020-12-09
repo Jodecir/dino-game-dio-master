@@ -1,39 +1,10 @@
+@font-face {
+	font-family:Principal;
+	src:url(../fonts/PressStart2P-Regular.ttf);
+}
+
 body {
   background: #fafafa;
-}
-
-.dino {
-  position: absolute;
-  bottom: 0;
-  background-image: url('../img/dino.png');
-  width: 60px;
-  height: 60px;
-}
-
-.cactus {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  bottom: 0;
-  background-image: url('../img/cactus.png');
-}
-
-.game-over {
-  text-align: center;
-  color: #666;
-  margin: 50px 0;
-  font-family: arial;
-}
-
-#restart{
-	background-color: #111;
-	border-radius: 10px;
-  color: #fff;
-  margin: 50px 0 0 565px;
-	display: flex;
-	cursor: pointer;
-	height: 32px;
-	transform: scale(1.5);
 }
 
 .background-game {
@@ -54,4 +25,39 @@ body {
   to {
       background-position: 0%;
   }
+}
+
+.dino {
+  position: absolute;
+  bottom: 0;
+  background-image: url('../img/dino.png');
+  width: 60px;
+  height: 60px;
+}
+
+.cactus {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: 0;
+  background-image: url('../img/cactus.png');
+}
+
+.game-over {
+	font-family:Principal;
+  color: #666;
+  text-align: center;
+  margin: 50px 0;
+}
+
+#restart{
+	font-family:Principal;
+	background-color: #111;
+	border-radius: 10px;
+  color: #fff;
+  margin: 50px 0 0 545px;
+	display: flex;
+	cursor: pointer;
+	height: 32px;
+	transform: scale(1.5);
 }
