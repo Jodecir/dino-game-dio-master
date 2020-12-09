@@ -55,7 +55,7 @@ body {
   margin: 50px 0;
 }
 
-#restart{
+button{
 	font-family: Principal;
 	background-color: var(--preto);
 	border-radius: 10px;

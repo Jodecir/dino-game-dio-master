@@ -6,9 +6,14 @@ let isRunning = true;
 let isGameOver = false;
 let heelHeight = 0;
 
+let jumpSound=document.getElementById("jumpSound");
+
 function handleKeyUp(event) {
   if (event.keyCode === 32) {
-    if (!isJumping && isRunning) jump();
+    if (!isJumping && isRunning) {
+      jump();
+      jumpSound.play();
+    }
   }
 }
 
@@ -50,10 +55,8 @@ function showWarn(warning) {
 
 function createCactus() {
   let cactusPosition = 1000;
-
-  const randomTime = 600 + Math.random() * 800;
-
   const cactus = document.createElement('div');
+  const randomTime = 600 + Math.random() * 800;
   cactus.classList.add('cactus');
   cactus.style.left = cactusPosition + 'px';
   background.appendChild(cactus);
