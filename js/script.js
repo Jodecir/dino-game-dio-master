@@ -56,7 +56,7 @@ function showWarn(warning) {
 function createCactus() {
   let cactusPosition = 1000;
   const cactus = document.createElement('div');
-  const randomTime = 600 + Math.random() * 800;
+  const randomTime = 800 + Math.random() * 800;
   cactus.classList.add('cactus');
   cactus.style.left = cactusPosition + 'px';
   background.appendChild(cactus);
