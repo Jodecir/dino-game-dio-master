@@ -4,6 +4,7 @@
 }
 
 body {
+	font-family:Principal;
   background: #fafafa;
 }
 
@@ -44,7 +45,6 @@ body {
 }
 
 .game-over {
-	font-family:Principal;
   color: #666;
   text-align: center;
   margin: 50px 0;
