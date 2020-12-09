@@ -60,7 +60,7 @@ body {
 	background-color: var(--preto);
 	border-radius: 10px;
   color: var(--branco);
-  margin: 10vh 0 0 100vh;
+  margin: 10vh 0 0 98vh;
 	display: flex;
 	cursor: pointer;
   height: 32px;
