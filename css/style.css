@@ -55,12 +55,12 @@ body {
   margin: 50px 0;
 }
 
-button{
+#restart{
 	font-family: Principal;
 	background-color: var(--preto);
 	border-radius: 10px;
   color: var(--branco);
-  margin: 10vh 0 0 88vh;
+  margin: 10vh 0 0 100vh;
 	display: flex;
 	cursor: pointer;
   height: 32px;
