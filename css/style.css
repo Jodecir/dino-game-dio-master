@@ -1,11 +1,17 @@
 @font-face {
-	font-family:Principal;
+	font-family: Principal;
 	src:url(../fonts/PressStart2P-Regular.ttf);
 }
 
+:root {
+  --branco: #fafafa;
+  --preto: #000000;
+  --cinza: #666666;
+}
+
 body {
-	font-family:Principal;
-  background: #fafafa;
+	font-family: Principal;
+  background: var(--branco);
 }
 
 .background-game {
@@ -45,19 +51,21 @@ body {
 }
 
 .game-over {
-  color: #666;
+  color: var(--cinza);
   text-align: center;
   margin: 50px 0;
 }
 
 #restart{
-	font-family:Principal;
-	background-color: #111;
+	font-family: Principal;
+	background-color: var(--preto);
 	border-radius: 10px;
-  color: #fff;
-  margin: 50px 0 0 545px;
+  color: var(--branco);
+  margin: 10vh 0 0 88vh;
 	display: flex;
 	cursor: pointer;
-	height: 32px;
+  height: 32px;
+  text-align: center;
+  justify-content: center;
 	transform: scale(1.5);
 }
