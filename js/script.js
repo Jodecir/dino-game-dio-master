@@ -4,7 +4,7 @@ const background = document.querySelector('.background-game');
 let isJumping = false;
 let isRunning = true;
 let isGameOver = false;
-let height = 0;
+let heelHeight = 0;
 
 function handleKeyUp(event) {
   if (event.keyCode === 32) {
@@ -23,16 +23,16 @@ function jump() {
     if (acceleration > gravity) {
       acceleration *= .92;
     } else {
-      if (height + acceleration <= 0) {
-        height = 0;
+      if (heelHeight + acceleration <= 0) {
+        heelHeight = 0;
         clearInterval(jumpInterval);
         isJumping = false;
       } else {
         acceleration -= 1;
       }
     }
-    dino.style.bottom = height + "px";
-    height += acceleration;
+    dino.style.bottom = heelHeight + "px";
+    heelHeight += acceleration;
     step++;
 
     if (!isRunning) clearInterval(jumpInterval);
@@ -50,7 +50,8 @@ function showWarn(warning) {
 
 function createCactus() {
   let cactusPosition = 1000;
-  let randomTime = Math.random() * 6000;
+
+  const randomTime = 600 + Math.random() * 800;
 
   const cactus = document.createElement('div');
   cactus.classList.add('cactus');
@@ -61,7 +62,7 @@ function createCactus() {
     if (cactusPosition < -60) {
       clearInterval(leftTimer);
       background.removeChild(cactus);
-    } else if (cactusPosition > 0 && cactusPosition < 60 && height <= 60) {
+    } else if (cactusPosition > 0 && cactusPosition < 60 && heelHeight <= 60) {
       clearInterval(leftTimer);
       isRunning = false;
       isGameOver = true;
