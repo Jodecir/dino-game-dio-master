@@ -25,6 +25,17 @@ body {
   font-family: arial;
 }
 
+#restart{
+	background-color: #111;
+	border-radius: 10px;
+  color: #fff;
+  margin: 50px 0 0 536px;
+	display: flex;
+	cursor: pointer;
+	height: 32px;
+	transform: scale(1.5);
+}
+
 .background-game {
   position: absolute;
   bottom: 0px;
