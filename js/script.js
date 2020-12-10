@@ -5,6 +5,7 @@ let isJumping = false;
 let isRunning = true;
 let isGameOver = false;
 let heelHeight = 0;
+let jumpedObstacles = 0;
 
 let jumpSound=document.getElementById("jumpSound");
 
@@ -65,6 +66,8 @@ function createCactus() {
     if (cactusPosition < -60) {
       clearInterval(leftTimer);
       background.removeChild(cactus);
+      jumpedObstacles++;
+      document.getElementById("jumpedObstacles").innerHTML = "Jumped Obstacles: " + jumpedObstacles;
     } else if (cactusPosition > 0 && cactusPosition < 60 && heelHeight <= 60) {
       clearInterval(leftTimer);
       isRunning = false;

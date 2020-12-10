@@ -55,16 +55,19 @@ body {
   margin: 50px 0;
 }
 
+.group {
+  text-align: center;
+  justify-content: center;
+}
+
 #restart{
 	font-family: Principal;
 	background-color: var(--preto);
 	border-radius: 10px;
   color: var(--branco);
-  margin: 10vh 0 0 98vh;
+  margin: 10vh 0 6vh 90vh;
 	display: flex;
 	cursor: pointer;
   height: 32px;
-  text-align: center;
-  justify-content: center;
 	transform: scale(1.5);
 }
