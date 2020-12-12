@@ -9,8 +9,14 @@ let jumpedObstacles = 0;
 
 let jumpSound=document.getElementById("jumpSound");
 
+let Key = {
+  Space: 32,
+  W: 87,
+  Up: 38,
+}
+
 function handleKeyUp(event) {
-  if (event.keyCode === 32) {
+  if (event.keyCode === Key.Space || event.keyCode === Key.W || event.keyCode === Key.Up ) {
     if (!isJumping && isRunning) {
       jump();
       jumpSound.play();
@@ -21,7 +27,6 @@ function handleKeyUp(event) {
 function jump() {
   const gravity = 4;
   let acceleration = 15;
-  let step = 0;
 
   isJumping = true;
 
