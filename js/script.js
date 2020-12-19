@@ -76,9 +76,7 @@ function createCactus() {
       scoreboardRefresh();
     } else if (cactusPosition > 0 && cactusPosition < 60 && heelHeight <= 60) {
       clearInterval(leftTimer);
-      isRunning = false;
-      isGameOver = true;
-      showWarn("Game Over")
+      gameOver();
     } else {
       cactusPosition -= 10;
       cactus.style.left = cactusPosition + 'px';
@@ -92,6 +90,12 @@ function createCactus() {
 
 let scoreboardRefresh = () => {
   document.getElementById("jumpedObstacles").innerHTML = "Jumped Obstacles: " + jumpedObstacles;
+}
+
+let gameOver = () => {
+  isRunning = false;
+  isGameOver = true;
+  showWarn("Game Over")
 }
 
 document.addEventListener('keyup', handleKeyUp);
