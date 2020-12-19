@@ -1,6 +1,6 @@
 # Descrição do Exercício
 
-Repositório da aula de JS ensinada na plataforma da Digital Innovation One, cujo desafio era criar o jogo do Dinossauro do Chrome.
+Repositório da aula de JS ensinada na plataforma Digital Innovation One, cujo desafio era criar o jogo do Dinossauro do Chrome.
 
 ## Bootcamp
 
