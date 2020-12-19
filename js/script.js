@@ -1,6 +1,5 @@
 const dino = document.querySelector('.dino');
 const background = document.querySelector('.background-game');
-const aliensImg = ['../img/monster-1.png', '../img/monster-2.png', '../img/monster-3.png'];
 
 let isJumping = false;
 let isRunning = true;
