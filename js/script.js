@@ -1,5 +1,6 @@
 const dino = document.querySelector('.dino');
 const background = document.querySelector('.background-game');
+const aliensImg = ['../img/monster-1.png', '../img/monster-2.png', '../img/monster-3.png'];
 
 let isJumping = false;
 let isRunning = true;
@@ -72,7 +73,7 @@ function createCactus() {
       clearInterval(leftTimer);
       background.removeChild(cactus);
       jumpedObstacles++;
-      document.getElementById("jumpedObstacles").innerHTML = "Jumped Obstacles: " + jumpedObstacles;
+      scoreboardRefresh();
     } else if (cactusPosition > 0 && cactusPosition < 60 && heelHeight <= 60) {
       clearInterval(leftTimer);
       isRunning = false;
@@ -87,6 +88,10 @@ function createCactus() {
   }, 20);
 
   if (isRunning) setTimeout(createCactus, randomTime);
+}
+
+let scoreboardRefresh = () => {
+  document.getElementById("jumpedObstacles").innerHTML = "Jumped Obstacles: " + jumpedObstacles;
 }
 
 document.addEventListener('keyup', handleKeyUp);
